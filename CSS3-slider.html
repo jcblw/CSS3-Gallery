@@ -16,207 +16,24 @@
     body{
         background: #ddd;
     }
-       
-    .slider-wrap{
-        position: relative;
-        width: 760px;
-        margin: 5% auto;
-	padding: 20px;
-	background: #fff;
-	box-shadow: 0px 1px 2px rgba(0,0,0,.5);
-	border-radius: 4px;
-    }       
-       
-    ul.slider{
-        display: block;
-        width: 600px;
-        height: 400px;
-        position: relative;
-        /* remove this code*/
-        margin: 0 auto;
-        padding: 0;
-        list-style-type: none;
-        overflow: hidden;
-    }
     
-    .slider li{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 100%;
-        top: 0;
-        z-index: 0;
-	text-align: center;
-	line-height: 400px;
-    }
-    
-    .slider li img{
-	box-shadow: 0px 1px 2px rgba(0,0,0,.5);
-	padding: 10px;
-	background: #ddd;
-	border-radius: 4px;
-    }
-    
-    .slider li.animate{
-        -webkit-transition: left 750ms ;
-	-moz-transition: left 750ms ;
-	-o-transition: left 750ms ;
-	-ms-transition: left 750ms ;
-	transition: left 750ms ;
-        -webkit-transition-timing-function: cubic-bezier(1.000, 0.010, 0.590, 0.995); 
-        -moz-transition-timing-function: cubic-bezier(1.000, 0.010, 0.590, 0.995); 
-        -ms-transition-timing-function: cubic-bezier(1.000, 0.010, 0.590, 0.995); 
-        -o-transition-timing-function: cubic-bezier(1.000, 0.010, 0.590, 0.995); 
-        transition-timing-function: cubic-bezier(1.000, 0.010, 0.590, 0.995); /* custom */
-    }
-    
-    .slider li.previous{
-        left: -100%;
-        z-index: 1;
-    }
-    
-    .slider li.current{
-        left: 0px;
-        z-index: 2;
-    }
-    
-    .thumbs{
-        padding: 10px;
-        max-width: 300px;
-        margin: 0 auto;
-        overflow: hidden;
-        position: relative;
-    }
-    
-    .thumbs ul{
-        list-style-type: none;
-        padding: 0;
-        margin:  0;
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        -webkit-transition: left 750ms ;
-	-moz-transition: left 750ms ;
-	-o-transition: left 750ms ;
-	-ms-transition: left 750ms ;
-	transition: left 750ms ;
-        -webkit-transition-timing-function: cubic-bezier(1.000, 0.010, 0.590, 0.995); 
-        -moz-transition-timing-function: cubic-bezier(1.000, 0.010, 0.590, 0.995); 
-        -ms-transition-timing-function: cubic-bezier(1.000, 0.010, 0.590, 0.995); 
-        -o-transition-timing-function: cubic-bezier(1.000, 0.010, 0.590, 0.995); 
-        transition-timing-function: cubic-bezier(1.000, 0.010, 0.590, 0.995); /* custom */
-    }
-    
-    .thumbs li{
-        width: 40px;
-        height: 40px;
-        float: left;
-        background: #ddd;
-        margin: 5px;
-        border: 2px solid #ddd;
-        box-shadow: 0px 1px 2px rgba(0,0,0,.3);
-        cursor: pointer;
-	background: url(img/thumbs.gif);
-	overflow: hidden;
-    }
-    
-    .thumbs li:hover{
-        border-color: #999;
-    }
-    
-    .thumbs li img{
-        opacity: 0;
-        -webkit-transition: opacity 750ms ;
-	-moz-transition: opacity 750ms ;
-	-o-transition: opacity 750ms ;
-	-ms-transition: opacity 750ms ;
-	transition: opacity 750ms ;
-    }
-    
-    .thumbs li img.loaded{
-        opacity: 1;
-    }
-    
-    .next, .prev, .thumb-next, .thumb-prev{
-        position: absolute;
-        font-weight: 700;
-	background:  url(img/sprite.png) no-repeat;
-	cursor: pointer;
-    }
-    
-    .next, .prev{
-        width: 58px;
-	height: 75px;
-        top: 200px;
-    }
-    
-    .next{
-	background-position: -381px 0px;
-	right: 20px;
-    }
-    
-    .prev {
-	background-position: -227px 0px;
-	left: 20px;
-    }
-    
-    .thumb-next, .thumb-prev{
-        height: 50px;
-	width: 45px;
-        top: 425px;
-    }
-    
-    .thumb-next{
-	background-position: -333px -15px;
-	right: 170px;
-    }
-    
-    .thumb-prev{
-	background-position: -287px -15px;
-	left: 170px;
-    }
-    
-    li.current-thumb{
-        border-color: #222;
-    }
-    
-    .l, .r{
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 20px;
-        z-index: 5;
-    }
-    
-    .l{
-        left: 0;
-        background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
-        background: linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
-    }
-    
-    .r{
-        right: 0;
-        background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
-        background: linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+    .invisible{
+	overflow:hidden;
+	height: 0;
+	width: 0;
+	visibility: hidden;
     }
     
     .clear{
         clear : both;
     }
 </style>
+<link href="style.css" type="text/css" rel="stylesheet" />
+    <a href="#Development">Development</a>
+    <a href="#web">Websites</a>
+    <a href="#design">Design</a>
+    <a href="#photo">Photo Editing</a>
     <ul class=slider>
-        <div class=l ></div>
-        <div class=r ></div>
 	    <li class="slide">
 		<img class="aligncenter size-full wp-image-654" title="asw" src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/asw.jpg" alt="This is a CD cover design for A Sudden Wait" width="500" height="300" />
 	    </li>
@@ -261,469 +78,145 @@
 	    </li>
     </ul>
 
-
+<div class=invisible >
+    <ul class="port-list" rel="Development">
+<li class="slide">
+<img src="http://www.redeyeoperations.com/wp-content/uploads/2010/01/zoomy.jpg" alt="Zoomy is a open source jQuery plugin that magnifies an image. http://zoomy.me" title="zoomy" width="500" height="300" class="alignright size-full wp-image-1169" />
+</li>
+<li class="slide">
+<img src="http://www.redeyeoperations.com/wp-content/uploads/2010/01/notify.jpg" alt="http://redeyeoperations.com/plugins/Notify Notify is an open source jQuery plugin that sets up basic notifications on your website" title="notify" width="500" height="300" class="alignright size-full wp-image-1170" />
+</li>
+<li class="slide">
+<img src="http://www.redeyeoperations.com/wp-content/uploads/2010/01/scrollimate.jpg" alt="http://redeyeoperations.com/plugins/Scrollimate Scrollimateis a open source jQuer Plugin that animates while you scroll. This is just a demo page" title="scrollimate" width="500" height="300" class="alignright size-full wp-image-1171" />
+</li>
+</ul>
+<p><br class="clear" /></p>
+<h2>Websites</h2>
+<div class="btn"><a href="#gal" class="openGal" rel="web">Open Gallery</a></div>
+<ul class="port-list" rel="web">
+<li class="slide">
+<img class="aligncenter size-full wp-image-785" title="cellora" src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/cellora1.jpg" alt="This is a Myspace Design, Cellora, not a band anymore but the design is still active http://myspace.com/cellora" width="500" height="300" />
+</li>
+<li class="slide">
+<img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/cos.jpg" alt="http://cos247.com Circle Of Success. Long Time Client, and great friends" title="cos" width="500" height="300" class="aligncenter size-full wp-image-716" />
+</li>
+<li class="slide">
+<img class="aligncenter size-full wp-image-787" title="mindmender" src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/mindmender.jpg" alt="Web portfolio of Eric Felber, not active" width="500" height="300" />
+</li>
+<li class="slide">
+<img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/hdmr.jpg" alt="This is a Myspace Design, Her Demise my Rise, not active anymore" title="hdmr" width="500" height="300" class="aligncenter size-full wp-image-790" />
+</li>
+<li class="slide">
+<img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/nefarious.jpg" alt="Nefarious Clothing, good friends, http://nefariousclothing.net" title="nefarious" width="500" height="300" class="aligncenter size-full wp-image-792" />
+</li>
+<li class="slide">
+<img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/neonsea.jpg" alt="This is a WordPress Theme that will be released towards the end of the year" title="neonsea" width="500" height="300" class="aligncenter size-full wp-image-794" />
+</li>
+<li class="slide">
+<img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/nfcprints.jpg" alt="Sister Company to Nefarious, http://nfcprinting.com" title="nfcprints" width="500" height="300" class="aligncenter size-full wp-image-796" />
+</li>
+<li class="slide">
+<img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/tmills.jpg" alt="This is a Myspace Design, TMILLS older design not active anymore." title="tmills" width="500" height="300" class="aligncenter size-full wp-image-798" />
+</li>
+</ul>
+<p><br class="clear" /></p>
+<h2>Design Work</h2>
+<div class="btn"><a href="#gal" class="openGal" rel="design">Open Gallery</a></div>
+<ul class="port-list" rel="design">
+<li class="slide">
+<p><img class="aligncenter size-full wp-image-654" title="asw" src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/asw.jpg" alt="This is a CD cover design for A Sudden Wait" width="500" height="300" /></p>
+</li>
+<li class="slide">
+<p style="text-align: center;"><a href="http://www.redeyeoperations.com/wp-content/uploads/2010/08/bball.jpg"><img class="aligncenter size-full wp-image-639" title="bball" src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/bball.jpg" alt="This is a Basketball Design that I had made for a sports site." width="500" height="300" /></a></p>
+</li>
+<li class="slide">
+<p><a href="http://www.redeyeoperations.com/wp-content/uploads/2010/08/blair.jpg"><img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/blair.jpg" alt="Jacob Lowe Personal Work all photoshop" title="blair" width="500" height="300" class="aligncenter size-full wp-image-687" /></a></p>
+</li>
+<li class="slide">
+<p><img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/flamLogo.png" alt="CD Burner logo (for sale)" title="flamLogo" width="500" height="300" class="aligncenter size-full wp-image-694" /></p>
+</li>
+<li class="slide">
+<p><img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/cellora.jpg" alt="Cellora Logo and CD Cover" title="cellora" width="500" height="300" class="aligncenter size-full wp-image-690" /></p>
+</li>
+<li class="slide">
+<p><img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/jsm.jpg" alt="JS&amp;M Enterprise" title="jsm" width="500" height="300" class="aligncenter size-full wp-image-697" /></p>
+</li>
+<li class="slide">
+<p><img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/klmcagency.jpg" alt="KLMC Agency Logo" title="klmcagency" width="500" height="300" class="aligncenter size-full wp-image-700" /></p>
+</li>
+<li class="slide">
+<p><img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/lapeyre.jpg" alt="La Peyre Jewelry " title="lapeyre" width="500" height="300" class="aligncenter size-full wp-image-703" /></p>
+</li>
+<li class="slide">
+<p><img src="http://www.redeyeoperations.com/wp-content/uploads/2010/09/lyts.jpg" alt="Album cover mock up" title="lyts" width="500" height="300" class="aligncenter size-full wp-image-753" /></p>
+</li>
+<li class="slide">
+<p><img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/mm.jpg" alt="Mind Mender Logo" title="mm" width="500" height="300" class="aligncenter size-full wp-image-706" /></p>
+</li>
+<li class="slide">
+<p style="text-align: center;"><img class="aligncenter size-full wp-image-635" title="ttrash" src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/ttrash.jpg" alt="This is a piece called Terrestrial Trash which was made for a Nefarious Clothing" width="500" height="300" /></p>
+</li>
+<li class="slide">
+<p><img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/tenasious.jpg" alt="Tenacious Tees Printing Logo" title="tenasious" width="500" height="300" class="aligncenter size-full wp-image-710" /></p>
+</li>
+<li class="slide">
+<p><img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/hdmrCD.jpg" alt="Her Demise My Rise CD Cover" title="hdmrCD" width="500" height="300" class="aligncenter size-full wp-image-723" /></p>
+</li>
+<li class="slide">
+<p><a href="http://www.redeyeoperations.com/wp-content/uploads/2010/08/wergrin.jpg"><img class="aligncenter size-full wp-image-651" title="wergrin" src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/wergrin.jpg" alt="We R Grindin Dvd logo" width="500" height="300" /></a></p>
+</li>
+</ul>
+<p><br class="clear" /></p>
+<h2>Photo Editing</h2>
+<div class="btn"><a href="#gal" class="openGal" rel="photo">Open Gallery</a></div>
+<ul class="port-list" rel="photo">
+<li class="slide">
+<p><img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/autumn.jpg" alt="Autumn photo &amp; hair by: Kim Wade" title="autumn" width="500" height="300" class="aligncenter size-full wp-image-720" /></p>
+</li>
+<li class="slide">
+<p><img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/boobyasPhoto.jpg" alt="Hamburger Promo for Bobby A's" title="boobyasPhoto" width="500" height="300" class="aligncenter size-full wp-image-738"  /></p>
+</li>
+<li class="slide">
+<p><img src="http://www.redeyeoperations.com/wp-content/uploads/2010/09/dozer.jpg" alt="Dozer Head Shots" title="dozer" width="500" height="300" class="aligncenter size-full wp-image-841" /></p>
+</li>
+<li class="slide">
+<p><img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/hrmd.jpg" alt="Her Rise My Demise PR Photoshoot" title="hrmd" width="500" height="300" class="aligncenter size-full wp-image-678" /></p>
+</li>
+<li class="slide">
+<p><img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/jenny.jpg" alt="Jenny Lewis" title="jenny" width="500" height="300" class="aligncenter size-full wp-image-681" /></p>
+</li>
+<li class="slide">
+<p><img class="aligncenter size-full wp-image-659" title="miranda" src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/miranda.jpg" alt="Miranda, skin softening, light manipulation, curve smoothing" width="500" height="300" /></p>
+</li>
+<li class="slide">
+<p><img src="http://www.redeyeoperations.com/wp-content/uploads/2010/08/tmill.jpg" alt="TMILL Bamboozle Photo shoot. " title="tmill" width="500" height="300" class="aligncenter size-full wp-image-675" /></p>
+</li>
+</ul>
+</div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
-
-<script>
-    /*
-     *Image Resizing - resize images to fill or fit parent element
-     *================================================
-     *
-     */
-    
-    (function($){
-	//function to flex image
-        var resizeImage = function(img, parent){
-
-            switch(parent.orientation){
-                case 'lanscape' : {
-                    var ratio = parent.width / img.width,
-                        height = img.height * ratio,
-                        width = parent.width,
-                        overflow = (height - parent.height ) / 2;
-                    //Set height to window width then get ratio multiply height by ratio
-                    $(img.ele)
-                        .attr({
-                            width: width,
-                            height : height
-                        })
-                        .css({
-                            marginTop: -overflow ,
-                            marginLeft: 0
-                        });
-                        break;
-
-                }
-                case 'portrait' : {
-                    var ratio = parent.height / img.height,
-                        width = img.width * ratio,
-                        height = parent.height,
-                        overflow = (width - parent.width ) / 2;
-                    //Set height to window width then get ratio multiply height by ratio
-                    $(img.ele)
-                        .attr({
-                            width: width,
-                            height : height
-                        })
-                        .css({
-                            marginLeft: -overflow,
-                            marginTop: 0
-                        });
-                        break;
-                }
-            }
-            $(img.ele).removeClass('invisible');
-        };
-	
-	
-	$.fn.image = function(type){
-	    
-	    var ele = this,
-		    imgEle = ele.find('img'),
-		    parent = {
-			height: ele.height(),
-			width: ele.width()
-		    },
-		    img = {
-			ele : imgEle,
-			width: imgEle.width(),
-			height: imgEle.height()
-		    }
-		    
-		    img.ratio = img.height / img.width;
-		    img.orientation = (img.height > img.width) ? 'portrait' : 'lanscape';
-		    parent.orientation = (parent.height > parent.width || parent.ratio > img.ratio) ? 'portrait' : (parent.height === parent.width && img.orientation === 'lanscape') ? 'portrait' : 'lanscape';
-		    
-		    resizeImage(img, parent);
-		    //console.log(parent);
-	    
-	};
-	    	
-    }(jQuery));
-    
-    /*
-     * Larger Slider - Animations are based in CSS3 so IE will fallback to no animations
-     * =================================================
-     * simple plugin and utility to slide through a list
-     *
-     */
-    (function($){
-        
-        var ele = null,
-            els = null,
-            next,
-            slider = {
-                data : {
-                   current : null,
-                   size : null,
-                   slides : null
-                },
-                cue : function(dir){
-                   //console.log({current : slider.data.current, direction: dir, size : slider.data.size}); 
-                },
-                transition : function(dir){
-                    var prev = (dir === 'plus') ? 'addClass' : 'removeClass';
-                    window.setTimeout(function(){
-                        $(els[next]).addClass('current animate');
-                        $(els[slider.data.current]).removeClass('current')[prev]('previous');
-                        
-                        slider.data.current = next;
-                        
-                        slider.callback({current: slider.data.current});
-                    }, 100);
-                },
-                events : {
-                    next : function(){
-                        
-                        next = (slider.data.current + 2 > slider.data.size) ? 0 : slider.data.current + 1;
-                        
-                        $(els[next]).removeClass('previous animate');
-                        
-                        slider.transition('plus');
-                        
-                    },
-                    prev : function(){
-                        
-                        next = (slider.data.current - 1 < 0) ? slider.data.size - 1 : slider.data.current - 1;
-                        
-                        $(els[next]).removeClass('animate').addClass('previous');
-                        
-                        slider.transition('minus');
-                        
-                    },
-                    attach : function(){
-                        $('.next, .prev').bind('click', function(){                          
-                            
-                            if($(this).hasClass('next')){
-                                
-                                slider.events.next();
-                                
-                            }else{
-                                
-                                 slider.events.prev();                                       
-                                
-                            }
-                            
-                        })
-                    }
-                },
-                start : function(){
-                    
-                    slider.data.slides = els;
-                    slider.data.size = els.length;
-                    slider.data.current = 0;
-                    
-                    $(els[0]).addClass('current');
-                    
-                    window.setTimeout(function(){
-                            $(els[0]).addClass('animate');    
-                    })
-                    
-                    slider.events.attach();
-                    
-                }
-            }
-            
-            $.fn.slide = function(callback){
-                ele = $(this),
-                els = ele.find('li');
-                slider.callback = callback;
-                
-                slider.start();
-                
-                callback({current: 0});
-                
-                return this;
-            
-            };
-            
-            $.slide = {
-                kill: function(){
-                    $('.next, .prev').unbind('click');
-                },
-                thumbs : function(i){
-                    
-                    next  = i;
-                    $(els[next]).removeClass('previous animate');
-                    
-                    slider.transition('plus');
-                }
-            }
-    
-    }(jQuery));
-    
-    /*
-     * Small Thumbs - Animations are based in CSS3 so IE will fallback to no animations
-     * =================================================
-     * simple plugin and utility to slide through a list
-     *
-     */
-    
-    (function($){
-        
-        var ele = null,
-            els = null,
-            thumbs ={
-                data : {
-                    els : null,
-                    thumbnails : {
-                        size: null,
-                        width: null
-                    },
-                    gutter : {
-                        ele : null,
-                        width: null
-                    },
-                    width : null,
-                    limit: null,
-                    current : null
-                },
-                transition : function(){
-                    
-                },
-                events : {
-                    cue : function(){
-                        
-                        var prev = $('.thumb-prev'),
-                            next = $('.thumb-next');
-                        
-                        //console.log({current : thumbs.data.current, next : thumbs.data.current - thumbs.data.width, prev : thumbs.data.current + thumbs.data.width})                        
-                        
-                        if(thumbs.data.current + thumbs.data.width > 10 ){
-                            prev.hide();
-                        }else{
-                            prev.show();
-                        }
-                        
-                        if(thumbs.data.current - thumbs.data.width - 10 <= thumbs.data.limit ){
-                            next.hide();
-                        }else{
-                            next.show();
-                        }
-                        
-                        
-                    },
-                    next : function(){
-                        
-                        $(thumbs.data.gutter.ele).find('ul').css('left', thumbs.data.current - thumbs.data.width);
-                        
-                        thumbs.data.current = thumbs.data.current - thumbs.data.width;
-                        
-                        thumbs.events.cue();
-                        
-                    },
-                    prev : function(){
-                        
-                        $(thumbs.data.gutter.ele).find('ul').css('left', thumbs.data.current + thumbs.data.width);
-                        
-                        thumbs.data.current = thumbs.data.current + thumbs.data.width;
-                        
-                        thumbs.events.cue();
-                        
-                    },
-                    attach : function(){
-                        
-                        thumbs.events.cue();                                                
-                        
-                        $('.thumb-next, .thumb-prev').bind('click', function(){
-                        
-                            if ($(this).hasClass('thumb-next')){
-                                thumbs.events.next();
-                            }else{
-                                thumbs.events.prev();
-                            }
-                            
-                        });
-                        
-                        $(thumbs.data.els).bind('click', function(){
-                            
-                            var i = $(this).index();
-                            
-                            //console.log(i)
-                            
-                            $.slide.thumbs(i);                     
-                            
-                        })
-                    }
-                },
-            
-		build  : function(){
-		    ele.find('li').each(function(){
-			
-			$(this).clone().appendTo('.thumbs ul');
-			
-		    });
-		    
-		    thumbs.data.els = thumbs.data.gutter.ele.find('li');
-		    thumbs.data.thumbnails.width = thumbs.data.els.width();
-		    thumbs.data.thumbnails.width = thumbs.data.thumbnails.width + parseFloat(thumbs.data.els.css('margin-left'));
-		    thumbs.data.gutter.width = (thumbs.data.thumbnails.width + 9) * thumbs.data.thumbnails.size;
-		    thumbs.data.gutter.width = ( thumbs.data.width > thumbs.data.gutter.width ) ? thumbs.data.width : thumbs.data.gutter.width;
-		    var done = true;
-		    for(i = 1; done; i+= 1){
-			
-			if(thumbs.data.width * i > thumbs.data.gutter.width && thumbs.data.width * ( i - 1 ) < thumbs.data.gutter.width){
-			    
-			    done = false;
-			    
-			    thumbs.data.limit =  - (thumbs.data.width * i);
-			    
-			    //console.log(thumbs.data.width * i);
-			
-			}
-			
-		    }
-		    
-		    $(thumbs.data.els).each(function(){
-			
-			var parent = $(this);
-		    
-			parent.find('img').load(function(){
-			
-			    $(this).addClass('loaded');
-			    
-			    parent.image('fill');                    
-			    
-			})    
-			
-		    })
-		    
-		    thumbs.data.current = 10;
-		    
-		    $(thumbs.data.gutter.ele)
-			.height(thumbs.data.thumbnails.width)
-			.find('ul')
-			.width(thumbs.data.gutter.width);
-			
-		    thumbs.events.attach();
-	
-		}
-	    }
-            
-            
-            $.fn.thumbs = function(){
-                
-                ele = $(this);
-                els = ele.find('li');
-                thumbs.data.thumbnails.size = els.length;
-                
-                thumbs.data.gutter.ele = $('.thumbs');
-                thumbs.data.width = thumbs.data.gutter.ele.width();
-                
-
-		thumbs.build();                
-            
-            }
-            
-            $.thumbs = function(i){
-
-                $(thumbs.data.els).removeClass('current-thumb');
-                $(thumbs.data.els[i]).addClass('current-thumb');                
-                
-            }
-            
-            
-                
-            
-    
-    }(jQuery));
-    
-    
-    (function($){
-	
-	    var ele, wrap,
-		thumbs,
-		init = {
-		    slider : function(){
-			ele.slide(function(e){
-			    //console.log(e);
-			    $.thumbs(e.current);   
-			
-			}); 
-		    },
-		    thumbs : function(){
-			
-			ele.thumbs();
-			
-			init.slider();			
-			
-		    }
-		    
-		},
-		build = {
-
-		    assets : function(){
-		
-			wrap.append('<div class=thumbs >\
-						    <ul></ul>\
-						    <div class="clear"></div>\
-						    <div class=l ></div>\
-						    <div class=r ></div>\
-						</div>\
-						<a class=next ></a>\
-						<a class=prev ></a>\
-						<a class=thumb-next ></a>\
-						<a class=thumb-prev ></a>');
-			
-			thumbs = $('.thumbs');			
-			
-			init.thumbs();
-			
-		    },
-		    
-		    wrap : function(){
-			
-			ele.wrap('<div class="slider-wrap" />"');
-		    
-			wrap = $('.slider-wrap');
-			
-			build.assets();
-			
-		    }  
-		    
-		};
-		
-		$.fn.gallery = function(){
-		    ele = $(this);
-		    
-		    build.wrap();
-		}
-		
-		$.gallery = {
-		    swap : function(list){
-			
-			ele.remove();
-			
-			thumbs.children('*').remove();
-			
-			wrap.append(list);
-			
-			$.slide.kill();
-			
-			ele = wrap.children('ul:first');
-			
-			console.log(ele);
-			
-			init.thumbs();
-			
-		    }
-		}
-	
-    }(jQuery))
-    
-    
+<script src="script.js"></script>
+<script defer>
     
     $(function(){
         
-        $('.slider').gallery();    
-        
+        $('.slider').gallery();
+	
+	$('a').bind('click', function(){
+	    
+	    var href = $(this).attr('href');
+	    
+	    href = href.replace('#', '');
+	    
+	    console.log(href);
+	    
+	    $.gallery.swap($('ul[rel=' + href + ']'));
+	    
+	    return false;    
+	})
+	/*To swap out galleries
+	 *
+         */
     });
-    
-    
-    
-    
-
-    
     
 </script>
